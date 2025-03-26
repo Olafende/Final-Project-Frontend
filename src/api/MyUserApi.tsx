@@ -107,7 +107,7 @@ export const useUpdateMyUser = () => {
     const mutation = useMutation ({
         mutationFn: updateMyUserRequest, 
     }); 
-  const { mutate: updateUser, isPending, isSuccess, error, reset } = mutation;
+  const { mutate: updateUser, isPending: mutationPending, isSuccess, error, reset } = mutation;
     
   if(isSuccess) {
         toast.success("User profile updated!");
@@ -118,5 +118,5 @@ export const useUpdateMyUser = () => {
         reset();
     }
 
-    return { updateUser, isPending, ...mutation};
+    return { updateUser, mutationPending, ...mutation};
 };
