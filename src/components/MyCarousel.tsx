@@ -1,6 +1,6 @@
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
-import LandingPhoto from "../assets/CarouselPhoto/landing_Photo.jpg"; // Ensure this is an array of images
+import LandingPhoto from "../assets/CarouselPhoto/landing_Photo.jpg"; 
 import FastFood from "../assets/CarouselPhoto/FastFood.jpg"
 import AsianFood from "../assets/CarouselPhoto/AsianFood.jpg"
 import {
