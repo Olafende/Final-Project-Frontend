@@ -23,7 +23,7 @@ type Props = {
  isPending: boolean;
 }
 
-const UserProfileForm = ({ onSave,isPending, currentUser }: Props) => {
+const UserProfileForm = ({ onSave, isPending, currentUser }: Props) => {
   const form = useForm<UserFormData> ({
     resolver: zodResolver(formSchema),
     defaultValues: currentUser,

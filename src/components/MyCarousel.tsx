@@ -26,14 +26,14 @@ const MyCarousel = () => {
   return (
     <Carousel
       plugins={[plugin.current]}
-      className="w-full max-w-screen-xl mx-fit|"
+      className="w-screen object-cover"
       onMouseEnter={() => plugin.current.stop()}
-      onMouseLeave={() => plugin.current.reset()}
+      onMouseLeave={() => plugin.current.play()}
     >
-      <CarouselContent>
+      <CarouselContent className="w-full">
         {Images.map((photo, index) => (
-          <CarouselItem key={index}>
-            <img src={photo} alt={`Slide ${index + 1}`} className="w-full h-auto object-cover" />
+          <CarouselItem key={index} className="w-full">
+            <img src={photo} alt={`Slide ${index + 1}`} className="w-full h-[500px] object-cover" />
           </CarouselItem>
         ))}
       </CarouselContent>
